@@ -50,8 +50,7 @@ public class Salad {
     }
 
     public void printSaladInfo() {
-        System.out.printf("This is salad with the name [%s]. It has calories: [%d]. Now the salad consists of the following ingredients:", name, saladCalories);
-        System.out.println();
+        System.out.printf("This is salad with the name [%s]. It has calories: [%d]. Now the salad consists of the following ingredients: \n", name, saladCalories);
         for (Vegetable specificVeg : ingredients) {
             System.out.println(specificVeg.getVegetableName());
         }
