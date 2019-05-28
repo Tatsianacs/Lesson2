@@ -7,11 +7,10 @@ public class GenerativeVegetable extends Vegetable {
         this.seedsSize = seedsSize;
     }
 
-
     @Override
     public void printVegetableInfo() {
-        System.out.println("I am Generative Vegetable");
-        System.out.printf("Vegetable name is [%s], it has [%s] seeds. CPFC is [%d]/[%d]/[%d]/[%d] ", getVegetableName(), seedsSize, getVegetableCalories(), getVegetableProtein(), getVegetableFat(), getVegetableCarbs());
+        System.out.printf("This is Generative Vegetable. Vegetable name is [%s], it has [%s] seeds. CPFC is [%d]/[%d]/[%d]/[%d] ",
+                getVegetableName(), seedsSize, getVegetableCalories(), getVegetableProtein(), getVegetableFat(), getVegetableCarbs());
     }
 
     public void eatGenerativeVegetable() {

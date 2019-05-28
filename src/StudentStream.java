@@ -2,7 +2,7 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class Task3 {
+public class StudentStream {
 
     public static ArrayList<Student> sortStudentsByAge(ArrayList<Student> students) {
         ArrayList<Student> sortedStudentList = students.stream().sorted(Comparator.comparingInt(Student::getAge)).collect(Collectors.toCollection(ArrayList::new));

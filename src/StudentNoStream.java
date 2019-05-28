@@ -3,7 +3,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Task2 {
+public class StudentNoStream {
 
     public static void sortStudentsByAge(ArrayList<Student> students) {
         students.sort(Comparator.comparingInt(Student::getAge));

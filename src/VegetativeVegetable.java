@@ -7,11 +7,9 @@ public class VegetativeVegetable extends Vegetable {
         this.leafSize = leafSize;
     }
 
-
     @Override
     public void printVegetableInfo() {
-        System.out.println("I am Vegetative Vegetable");
-        System.out.printf("Vegetable name is [%s], it has [%s] leaf. CPFC is [%d]/[%d]/[%d]/[%d] ", getVegetableName(), leafSize, getVegetableCalories(), getVegetableProtein(), getVegetableFat(), getVegetableCarbs());
+        System.out.printf("I am Vegetative Vegetable. Vegetable name is [%s], it has [%s] leaf. CPFC is [%d]/[%d]/[%d]/[%d] ", getVegetableName(), leafSize, getVegetableCalories(), getVegetableProtein(), getVegetableFat(), getVegetableCarbs());
     }
 
     public void eatVegetativeVegetable() {

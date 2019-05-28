@@ -31,7 +31,9 @@ public class Salad {
     }
 
     public void addIngredientToSalad(Vegetable ing) {
+        System.out.println("New ingredient is added.");
         this.ingredients.add(ing);
+        this.saladCalories += ing.getVegetableCalories();
     }
 
     public void removeIngredientFromSalad(String name) {
@@ -39,13 +41,16 @@ public class Salad {
         while (itr.hasNext()) {
             Vegetable veg = (Vegetable) itr.next();
             String vegNameToBeRemoved = veg.getVegetableName();
-            if (vegNameToBeRemoved.equals(name))
+            if (vegNameToBeRemoved.equals(name)) {
+                System.out.println("Ingredient is removed");
+                this.saladCalories -= veg.getVegetableCalories();
                 itr.remove();
+            }
         }
     }
 
     public void printSaladInfo() {
-        System.out.printf("This is salad with the name [%s]. It has calories: [%d]. It consists of the following ingredients:", name, saladCalories);
+        System.out.printf("This is salad with the name [%s]. It has calories: [%d]. Now the salad consists of the following ingredients:", name, saladCalories);
         System.out.println();
         for (Vegetable specificVeg : ingredients) {
             System.out.println(specificVeg.getVegetableName());
@@ -53,6 +58,7 @@ public class Salad {
     }
 
     public void sortVegetablesInSalad() {
+        System.out.println("Vegs are sorted in Salad.");
 //        ingredients.sort(new VegetableNameComparator()); 1st sort
 //        ingredients.sort(new VegetableCaloriesComparator()); 2nd sort
 //        ingredients.sort((o1, o2) -> o1.getVegetableName().compareTo(o2.getVegetableName())); 3rd sort
