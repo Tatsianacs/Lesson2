@@ -74,7 +74,7 @@ public class Main {
         ArrayList<Integer> arrList = ListComparison.createArrayList();
         LinkedList<Integer> linkedList = ListComparison.createLinkedList();
         long timeForArrayListAddOperation = ListComparison.getTimeToAddToArrayList(arrList);
-        long timeForLinkedListAddOperation = ListComparison.getTimeToAddTLinkedList(linkedList);
+        long timeForLinkedListAddOperation = ListComparison.getTimeToAddToLinkedList(linkedList);
         long timeDifferenceForAdd = Math.abs(timeForArrayListAddOperation - timeForLinkedListAddOperation);
         System.out.printf("-----Time to add 1000 elements: \n for ArrayList is [%d] \n for LinkedList is [%d] \n difference is [%d] nano seconds \n",
                 timeForArrayListAddOperation, timeForLinkedListAddOperation, timeDifferenceForAdd);
