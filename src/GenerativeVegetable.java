@@ -13,7 +13,4 @@ public class GenerativeVegetable extends Vegetable {
                 getVegetableName(), seedsSize, getVegetableCalories(), getVegetableProtein(), getVegetableFat(), getVegetableCarbs());
     }
 
-    public void eatGenerativeVegetable() {
-        System.out.println("Used in food: fruits, seeds, young ovaries");
-    }
 }

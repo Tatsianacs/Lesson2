@@ -12,7 +12,4 @@ public class VegetativeVegetable extends Vegetable {
         System.out.printf("I am Vegetative Vegetable. Vegetable name is [%s], it has [%s] leaf. CPFC is [%d]/[%d]/[%d]/[%d] ", getVegetableName(), leafSize, getVegetableCalories(), getVegetableProtein(), getVegetableFat(), getVegetableCarbs());
     }
 
-    public void eatVegetativeVegetable() {
-        System.out.println("Used in food: shoots, leaves, stems, roots, rhizomes, tubers");
-    }
 }

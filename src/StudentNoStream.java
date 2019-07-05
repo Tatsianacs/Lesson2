@@ -18,7 +18,7 @@ public class StudentNoStream {
     public static ArrayList<Student> findStudentsByFirstLetterOfSurname(ArrayList<Student> students, char startOfSurname) {
         ArrayList<Student> foundStudents = new ArrayList<>();
         for (Student student : students) {
-            if (student.getSurname().charAt(0) == startOfSurname) {
+            if (Character.toLowerCase(student.getSurname().charAt(0)) == Character.toLowerCase(startOfSurname)) {
                 foundStudents.add(student);
             }
         }
@@ -44,7 +44,7 @@ public class StudentNoStream {
 
     public static void printStudentMap(HashMap<Integer, Student> mapOfStudents) {
         for (Map.Entry<Integer, Student> item : mapOfStudents.entrySet()) {
-            System.out.printf("Key: %d  Value: %s \n", item.getKey(), item.getValue());
+            System.out.printf("Key: %d  Value: %s \n", item.getKey(), item.getValue().getName());
         }
     }
 

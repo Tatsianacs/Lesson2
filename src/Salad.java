@@ -8,9 +8,11 @@ public class Salad {
     ArrayList<Vegetable> ingredients;
     private int saladCalories = 0;
 
-    Salad(String name, Vegetable... ingredient) {
+    Salad(String name, Vegetable mainIngredient, Vegetable... ingredient) {
         this.name = name;
         ingredients = new ArrayList<Vegetable>();
+        this.ingredients.add(mainIngredient);
+        this.saladCalories += mainIngredient.getVegetableCalories();
         for (Vegetable specificVeg : ingredient) {
             this.saladCalories += specificVeg.getVegetableCalories();
             this.ingredients.add(specificVeg);
@@ -42,9 +44,9 @@ public class Salad {
             Vegetable veg = (Vegetable) itr.next();
             String vegNameToBeRemoved = veg.getVegetableName();
             if (vegNameToBeRemoved.equals(name)) {
-                System.out.println("Ingredient is removed");
                 this.saladCalories -= veg.getVegetableCalories();
                 itr.remove();
+                System.out.println("Ingredient is removed");
             }
         }
     }
@@ -57,10 +59,7 @@ public class Salad {
     }
 
     public void sortVegetablesInSalad() {
-        System.out.println("Vegs are sorted in Salad.");
-//        ingredients.sort(new VegetableNameComparator()); 1st sort
-//        ingredients.sort(new VegetableCaloriesComparator()); 2nd sort
-//        ingredients.sort((o1, o2) -> o1.getVegetableName().compareTo(o2.getVegetableName())); 3rd sort
+        System.out.println("Vegetables are sorted in Salad.");
         ingredients.sort(Comparator.comparingInt(Vegetable::getVegetableCalories).reversed());
     }
 

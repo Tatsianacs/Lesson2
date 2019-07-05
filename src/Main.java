@@ -52,12 +52,12 @@ public class Main {
         StudentNoStream.printStudentMap(filteredMapOfStudents);
 
 //        // Task 3
-        System.out.println("-----Sort students-----");
+        System.out.println("-----Sort students by Age-----");
         ArrayList<Student> sortedStudentList = StudentStream.sortStudentsByAge(groupOfStudents);
         StudentStream.printStudents(sortedStudentList);
 
         System.out.println("-----Filter students who has T in surname start-----");
-        ArrayList<Student> filteredStudentList = StudentStream.findStudentsByFirstLetterOfSurname(groupOfStudents, 'T');
+        ArrayList<Student> filteredStudentList = StudentStream.findStudentsByFirstLetterOfSurname(groupOfStudents, 't');
         StudentStream.printStudents(filteredStudentList);
 
         System.out.println("-----Average student age is " + StudentStream.getAverageAge(groupOfStudents));

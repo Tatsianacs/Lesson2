@@ -19,9 +19,6 @@ public abstract class Vegetable {
 
     abstract public void printVegetableInfo();
 
-    public void washVegetable() {
-        System.out.println("Turn on water and wash");
-    }
 
     public String getVegetableName() {
         return name;
