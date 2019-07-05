@@ -9,8 +9,9 @@ public class GenerativeVegetable extends Vegetable {
 
     @Override
     public void printVegetableInfo() {
-        System.out.printf("This is Generative Vegetable. Vegetable name is [%s], it has [%s] seeds. CPFC is [%d]/[%d]/[%d]/[%d] ",
-                getVegetableName(), seedsSize, getVegetableCalories(), getVegetableProtein(), getVegetableFat(), getVegetableCarbs());
+        System.out.printf("This is Generative Vegetable. Vegetable name is [%s], it has [%s] seeds.",
+                getVegetableName(), seedsSize);
+        getCommonVegetableInfo();
     }
 
 }

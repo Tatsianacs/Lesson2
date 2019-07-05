@@ -10,6 +10,7 @@ public class Main {
         GenerativeVegetable pumpkin = new GenerativeVegetable("pumpkin", 26, 1, 7, 0, false, "average");
         GenerativeVegetable tomato = new GenerativeVegetable("tomato", 18, 1, 4, 0, true, "small");
         GenerativeVegetable corn = new GenerativeVegetable("corn", 96, 3, 21, 2, true, "small");
+        broccoli.printVegetableInfo();
         Salad belarusianSalad = new Salad("Healthy Diet", broccoli, tomato, onion, pumpkin);
         belarusianSalad.printSaladInfo();
         belarusianSalad.addIngredientToSalad(corn);

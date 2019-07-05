@@ -44,4 +44,8 @@ public abstract class Vegetable {
         return isImported;
     }
 
+    public void getCommonVegetableInfo() {
+        System.out.printf("CPFC is [%d]/[%d]/[%d]/[%d]. ", getVegetableCalories(), getVegetableProtein(), getVegetableFat(), getVegetableCarbs());
+    }
+
 }

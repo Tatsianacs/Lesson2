@@ -5,12 +5,11 @@ import java.util.Iterator;
 
 public class Salad {
     private String name;
-    ArrayList<Vegetable> ingredients;
+    ArrayList<Vegetable> ingredients = new ArrayList<Vegetable>();
     private int saladCalories = 0;
 
     Salad(String name, Vegetable mainIngredient, Vegetable... ingredient) {
         this.name = name;
-        ingredients = new ArrayList<Vegetable>();
         this.ingredients.add(mainIngredient);
         this.saladCalories += mainIngredient.getVegetableCalories();
         for (Vegetable specificVeg : ingredient) {
